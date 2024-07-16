@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(room.jpg);
+} 
+
+
+/* Quote Styles */
+.quote {
+    text-align: center;
+    padding: 20px;
+    padding-top: 80px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.quote h1 {
+    font-size: 26px;
+    padding: 10px;
+    background-color: rgba(223, 134, 25, 0.7);
+    border-radius: 5px;
+    margin: 0;
+}
+
+.quote h3 {
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    padding-left: 70%;
+}
+
+
+.container{
+    background-color: #f89e30;
+    width: 40%;
+    min-width: 500px;
+    max-width: 650px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 0;
+    margin-top: 10px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+}
+
+.timer-display{
+    position: relative;
+    width: 92%;
+    background: #ffbd6d;
+    left: 4%;
+    font-family: 'Roboto mono', monospace;
+    color: #26508f;
+    font-size: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(186, 98, 5, 0.25);
+}
+
+.buttons{
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.buttons button{
+    width: 120px;
+    height: 45px;
+    background-color: #2c61b1;
+    color: white;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.buttons button:nth-last-child(1){
+    background-color: #e35209;
+}
+
+.buttons button:nth-last-child(2){
+    background-color: #ffc430;
+}
+
+.buttons button:nth-last-child(4){
+    background-color: green;
+}
+
+.buttons button:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.laps {
+    max-height: 100px;
+    overflow-y: auto;
+    font-family: 'Roboto mono', monospace;
+    margin-top: 30px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.laps div {
+    padding: 5px 0;
+    border-bottom: 1px solid #ffa723;
+    font-size: 1em;
+}
+
+.laps div:first-child {
+    border-top: 1px solid #e79316;
+}
+
+.laps div:last-child {
+    border-bottom: none;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .container {
+        width: 70%;
+    }
+
+    .quote h1 {
+        font-size: 28px;
+    }
+
+    .timer-display {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .quote h1 {
+        font-size: 30px;
+    }
+
+    .timer-display {
+        font-size: 32px;
+    }
+
+    .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        margin: 0 5px;
+    }
+}
